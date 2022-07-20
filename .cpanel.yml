@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/faruliv1/public_html/
+    - export DEPLOYPATH=/home/faruliv1/public_html/bookshelf
     - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp styles.css $DEPLOYPATH
     - /bin/cp main.js $DEPLOYPATH
