@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1 class="welcome"><span>Hello,</span><br>
+        have you read today?</h1>
+        <hr>
+    </header>
+    <main>
+        <section class="inputContainer">
+            <h2>Add a book</h2>
+            <p class="subtitle">Insert information about your book</p>
+            <form id="inputBookForm">
+                <div class="input">
+                    <label for="inputBookTitle" class="inputLabel">Title</label>
+                    <input type="text" class="inputBook" id="inputBookTitle" placeholder="The Da Vinci Code" required />
+                </div>
+                <div class="input">
+                    <label for="inputBookAuthor" class="inputLabel">Author</label>
+                    <input type="text" class="inputBook" id="inputBookAuthor" placeholder="Dan Brown" required />
+                </div>
+                <div class="input">
+                    <label for="inputBookYear" class="inputLabel">Year</label>
+                    <input type="number" class="inputBook" id="inputBookYear" placeholder="2003" required />
+                </div>
+                <div class="input">
+                    <label class="inputLabel">Reading Status</label>
+                    
+                    <div class="readingStatus">
+                        <input type="radio" id="completed" value="true" name="readingStatus" checked="checked" />
+                        <label for="completed" id="completed">Completed</label>
+                        
+                        <input type="radio" id="onProgress" value="false" name="readingStatus" />
+                        <label for="onProgress" id="onProgress">On progress</label>
+                    </div>
+                </div>
+                <input type="submit" value="Submit" />
+            </form>
+        </section>
+        <hr>
+
+        <section class="searchContainer">
+            <h2>Search books in Bookshelf</h2>
+            <p class="subtitle">Type a keyword of your books title to search</p>
+            <form id="searchBook">
+                <input id="search" type="search" placeholder="Title.." />
+                <input id="searchSubmit" type="submit" value="Submit" />
+            </form>
+        </section>
+        <hr>
+
+        <section class="bookShelfContainer">
+            <h2>Bookshelf</h2>
+            <p class="subtitle">This is the list of your books that you have read completely or still on reading progress</p>
+            <div class="bookShelfOnProgress">
+                <h2>On progress</h2>
+                <div id="onProgressList" class="bookList">
+
+                </div>
+            </div>
+
+            <div class="bookShelfCompleted">
+                <h2>Completed</h2>
+                <div id="completedList" class="bookList">
+
+                </div>
+            </div>
+        </section>
+
+        <div id="snackbar">Data saved!</div>
+
+        <div id="overlay">
+            <div id="confirm-box">
+                <div class="close">&#10006;</div>
+                <div class="confirm-text">
+                    <h3>Delete Book</h3>
+                    <p>Are you sure want to delete this book?<br>
+                        If you delete this book, you will permanently lose this book from the bookshelf.
+                    </p>
+                </div>
+
+                <div class="confirm-button">
+                    <button class="no">Cancel</button>
+                    <button class="yes">Delete Book</button>
+                </div>    
+            </div>
+        </div>
+    </main>
+</div>
+<footer>
+    <p>Copyright &copy; 2022 Farul Ivan. All Right Reserved.</p>
+</footer>
+
+<script type="text/javascript" src="main.js">
+</script>
+</body>
+</html>
